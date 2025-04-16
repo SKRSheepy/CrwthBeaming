@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crwth Beaming</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a1a1a, #333333);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      overflow: hidden;
+      animation: backgroundAnimation 10s infinite alternate;
+    }
+    
+    @keyframes backgroundAnimation {
+      0% {
+        background: linear-gradient(135deg, #1a1a1a, #333333);
+      }
+      100% {
+        background: linear-gradient(135deg, #008000, #2a9d8f);
+      }
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 40px;
+      font-weight: 800;
+      color: #ff007a;
+      text-shadow: 0 0 20px rgba(255, 0, 122, 0.8), 0 0 30px rgba(255, 0, 122, 0.6);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 500px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      animation: glowEffect 1.5s infinite alternate;
+    }
+
+    @keyframes glowEffect {
+      0% {
+        box-shadow: 0 0 15px #00ff00;
+      }
+      100% {
+        box-shadow: 0 0 25px #00ff00, 0 0 50px #00ff00, 0 0 75px #00ff00;
+      }
+    }
+
+    .button {
+      padding: 15px 30px;
+      background: #000;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      margin: 10px;
+      width: 80%;
+    }
+
+    .button:hover {
+      background: #28a745;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(40, 167, 69, 0.8);
+    }
+
+    .button:active {
+      background: #333;
+      transform: scale(0.98);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Crwth Beaming</h1>
+  <canvas id="background"></canvas>
+  <div class="container">
+    <button class="button" onclick="window.location.href='https://app.genn.lu/auth/crwthgen'">Link Generator</button>
+    <button class="button" onclick="window.location.href='https://rbxtools.st/CrwthGens'">AutoHar</button>
+    <button class="button" onclick="window.location.href='https://bloxtools.st/Crwth/hyper-link'">HyperLink</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
